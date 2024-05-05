@@ -7,41 +7,43 @@ body {
 }
 
 .container {
-    width: 80%;
+    max-width: 960px;  /* Optimal width for alignment */
+    width: 100%;       /* Responsive width */
     margin: auto;
-    padding: 20px;
+    padding: 20px;     /* Increased padding for better centering */
+    box-sizing: border-box; /* Includes padding in width calculation */
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows the header elements to wrap on smaller screens */
+    flex-wrap: wrap;
 }
 
 .site-title a {
     text-decoration: none;
     color: #333;
-    font-size: 1.2em; /* Adjust size as needed */
+    font-size: 1.2em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Ensures nav items can wrap on smaller screens */
-    margin: 0; /* Resets margin for consistency */
+    flex-wrap: wrap;
+    margin: 0;
 }
 
 nav ul li {
-    margin-right: 10px; /* Provides spacing between nav items */
+    margin-right: 10px;
 }
 
 nav a {
     text-decoration: none;
     color: #333;
-    display: block; /* Improves tap target size on mobile */
-    padding: 10px; /* Adds padding to increase tap area */
+    display: block;
+    padding: 10px;
 }
 
 footer {
@@ -49,36 +51,40 @@ footer {
     margin-top: 20px;
 }
 
-/* Additional styles for iframe container */
-.document-section iframe {
-    width: 100%; /* Ensures iframe takes full width of its container */
-    height: 500px; /* Sets a fixed height, adjust based on content */
-    border: none; /* Removes border around iframe */
+.iframe-container iframe {
+    width: 100%;
+    height: 100vh;  /* This sets the iframe height to be 100% of the viewport height */
+    border: none;
+    display: block;
+    overflow-y: hidden;  /* Hides the vertical scrollbar */
 }
 
 @media (max-width: 768px) {
     .container {
-        width: 95%; /* Increases width on smaller screens */
+        width: 95%; /* Adjust for smaller screens */
+        padding: 20px; /* Reduced padding on smaller devices */
+    .iframe-container iframe {
+            height: auto; /* Let the iframe height adjust naturally on smaller screens */
+        }
     }
 
     .header {
-        justify-content: center; /* Centers header content on smaller screens */
-        flex-direction: column; /* Stacks the navigation and title vertically */
+        justify-content: center;
+        flex-direction: column;
     }
 
     nav ul {
-        flex-direction: column; /* Stacks nav items vertically */
-        align-items: center; /* Centers nav items */
-        width: 100%; /* Full width for better tap targets */
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
 
     nav ul li {
-        width: 100%; /* Full width nav items */
-        text-align: center; /* Centers text in nav items */
+        width: 100%;
+        text-align: center;
     }
 }
 
-/* Icons setup if you plan to use feather-icons */
 .icon-github, .icon-twitter {
     width: 16px;
     height: 16px;
