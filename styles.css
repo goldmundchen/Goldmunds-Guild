@@ -13,29 +13,45 @@ body {
 }
 
 .header {
+    background-color: #fff; /* Adjust the background color as needed */
+    padding: 10px 20px; /* Add padding for some space around the items */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow for depth */
+    position: sticky; /* Keeps the header at the top of the page */
+    top: 0;
+    z-index: 1000; /* Ensures the header is above other content */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Aligns items on opposite ends */
+    align-items: center; /* Centers items vertically */
 }
 
 .site-title a {
     text-decoration: none;
     color: #333;
+    font-size: 1.5em; /* Larger text for the logo */
+    font-weight: bold; /* Makes the logo text bold */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0; /* Removes margin */
+    display: flex; /* Displays the navigation items in a row */
+    gap: 20px; /* Adds space between each navigation item */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    /* Update to support flex display */
 }
 
 nav a {
     text-decoration: none;
     color: #333;
+    padding: 5px 10px; /* Adds padding around the links */
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+nav a:hover {
+    color: #555; /* Changes color on hover */
 }
 
 footer {
