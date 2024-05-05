@@ -16,31 +16,59 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allows the header elements to wrap on smaller screens */
 }
 
 .site-title a {
     text-decoration: none;
     color: #333;
+    font-size: 1.2em; /* Adjust size as needed */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Ensures nav items can wrap on smaller screens */
+    margin: 0; /* Resets margin for consistency */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 10px;
+    margin-right: 10px; /* Provides spacing between nav items */
 }
 
 nav a {
     text-decoration: none;
     color: #333;
+    display: block; /* Improves tap target size on mobile */
+    padding: 10px; /* Adds padding to increase tap area */
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Increases width on smaller screens */
+    }
+
+    .header {
+        justify-content: center; /* Centers header content on smaller screens */
+        flex-direction: column; /* Stacks the navigation and title vertically */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stacks nav items vertically */
+        align-items: center; /* Centers nav items */
+        width: 100%; /* Full width for better tap targets */
+    }
+
+    nav ul li {
+        width: 100%; /* Full width nav items */
+        text-align: center; /* Centers text in nav items */
+    }
 }
 
 /* Icons setup if you plan to use feather-icons */
