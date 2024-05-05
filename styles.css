@@ -44,15 +44,16 @@ nav a {
     padding: 10px; /* Adds padding to increase tap area */
 }
 
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Additional styles for iframe container */
 .document-section iframe {
     width: 100%; /* Ensures iframe takes full width of its container */
     height: 500px; /* Sets a fixed height, adjust based on content */
     border: none; /* Removes border around iframe */
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
 }
 
 @media (max-width: 768px) {
